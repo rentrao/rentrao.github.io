@@ -1,0 +1,1294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAO TOUR & TRAVELS | ₹13/km + Toll Only</title>
+    <meta name="description" content="Transparent pricing commercial car rental service. Only ₹13/km + toll charges. Book your safe, reliable ride today.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --royal-blue: #2563eb;
+            --royal-blue-dark: #1d4ed8;
+            --white: #ffffff;
+            --black: #1f2937;
+            --gray-light: #f3f4f6;
+            --gray: #6b7280;
+            --yellow: #f59e0b;
+            --yellow-light: #fbbf24;
+            --orange: #f97316;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --radius: 8px;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: var(--black);
+            background-color: var(--white);
+            overflow-x: hidden;
+        }
+        
+        body.menu-open {
+            overflow: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+        }
+
+        h2 {
+            font-size: 2rem;
+            position: relative;
+            display: inline-block;
+            margin-bottom: 2rem;
+        }
+
+        h2:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: var(--yellow);
+            border-radius: 2px;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--radius);
+            font-weight: 600;
+            text-align: center;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .btn-primary {
+            background: var(--yellow);
+            color: var(--black);
+        }
+
+        .btn-primary:hover {
+            background: var(--yellow-light);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-secondary {
+            background: var(--royal-blue);
+            color: var(--white);
+        }
+
+        .btn-secondary:hover {
+            background: var(--royal-blue-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-whatsapp {
+            background: #25D366;
+            color: var(--white);
+        }
+
+        .btn-whatsapp:hover {
+            background: #128C7E;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        section {
+            padding: 5rem 0;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-center h2:after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Header & Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: var(--white);
+            box-shadow: var(--shadow);
+            z-index: 1000;
+            transition: padding 0.3s ease;
+        }
+
+        .header-scrolled {
+            padding: 0.5rem 0;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+            transition: padding 0.3s ease;
+        }
+
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--royal-blue);
+            z-index: 1001;
+        }
+
+        .logo span {
+            color: var(--yellow);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            font-weight: 600;
+            position: relative;
+        }
+
+        .nav-links a:after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--yellow);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover:after {
+            width: 100%;
+        }
+
+        .nav-btns {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        /* FIX: Hide mobile buttons by default on desktop */
+        .nav-btns-mobile {
+            display: none;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            width: 30px;
+            height: 22px;
+            position: relative;
+            cursor: pointer;
+            z-index: 1001;
+            background: none;
+            border: none;
+        }
+        
+        .mobile-menu-btn span {
+            display: block;
+            position: absolute;
+            height: 3px;
+            width: 100%;
+            background: var(--black);
+            border-radius: 3px;
+            opacity: 1;
+            left: 0;
+            transform: rotate(0deg);
+            transition: .25s ease-in-out;
+        }
+
+        .mobile-menu-btn span:nth-child(1) { top: 0px; }
+        .mobile-menu-btn span:nth-child(2) { top: 9px; }
+        .mobile-menu-btn span:nth-child(3) { top: 18px; }
+
+        .mobile-menu-btn.active span:nth-child(1) {
+            top: 9px;
+            transform: rotate(135deg);
+        }
+        .mobile-menu-btn.active span:nth-child(2) {
+            opacity: 0;
+            left: -30px;
+        }
+        .mobile-menu-btn.active span:nth-child(3) {
+            top: 9px;
+            transform: rotate(-135deg);
+        }
+        
+        .menu-overlay {
+            display: none;
+        }
+        
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') no-repeat center center/cover;
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            max-width: 600px;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 1rem;
+            animation: fadeInUp 1s ease 0.4s both;
+        }
+
+        .tagline-rotator {
+            margin-top: 1.5rem;
+            font-style: italic;
+            min-height: 1.5em;
+            animation: fadeInUp 1s ease 0.6s both;
+        }
+
+        .tagline {
+            opacity: 0;
+            position: absolute;
+            transition: opacity 0.5s ease;
+        }
+
+        .tagline.active {
+            opacity: 1;
+            position: relative;
+        }
+
+        /* About Section */
+        .about {
+            background: var(--gray-light);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-highlights {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .highlight {
+            text-align: center;
+            padding: 1.5rem;
+            background: var(--white);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .highlight:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .highlight i {
+            font-size: 2.5rem;
+            color: var(--royal-blue);
+            margin-bottom: 1rem;
+        }
+
+        /* Cars Section */
+        .cars-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .car-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .car-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .car-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .car-img {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .car-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .car-card:hover .car-img img {
+            transform: scale(1.05);
+        }
+
+        .car-info {
+            padding: 1.5rem;
+        }
+
+        .car-info h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .car-features {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+            color: var(--gray);
+        }
+
+        /* Why Choose Us Section */
+        .why-us {
+            background: var(--gray-light);
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature {
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+
+        .feature i {
+            font-size: 3rem;
+            color: var(--yellow);
+            margin-bottom: 1rem;
+        }
+
+        /* Rates Section */
+        .pricing-table {
+            max-width: 800px;
+            margin: 3rem auto 0;
+            background: var(--white);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .pricing-row {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid var(--gray-light);
+        }
+
+        .pricing-row:last-child {
+            border-bottom: none;
+        }
+
+        .pricing-row:nth-child(even) {
+            background: var(--gray-light);
+        }
+
+        .pricing-feature {
+            font-weight: 600;
+        }
+
+        .pricing-value {
+            text-align: right;
+            color: var(--royal-blue);
+            font-weight: 600;
+        }
+
+        /* Booking Section */
+        .booking-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 2rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid #ddd;
+            border-radius: var(--radius);
+            font-family: 'Open Sans', sans-serif;
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--royal-blue);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+
+        .booking-btns {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        /* Contact Section */
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .contact-item i {
+            font-size: 1.5rem;
+            color: var(--royal-blue);
+            width: 40px;
+        }
+
+        .map-container {
+            height: 300px;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        /* Testimonials */
+        .testimonials {
+            background: var(--gray-light);
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .testimonial {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+
+        .testimonial:before {
+            content: '"';
+            font-size: 4rem;
+            color: var(--yellow-light);
+            position: absolute;
+            top: -10px;
+            left: 10px;
+            line-height: 1;
+        }
+
+        .testimonial-text {
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .author-info h4 {
+            margin-bottom: 0.2rem;
+        }
+
+        .author-info p {
+            margin-bottom: 0;
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--black);
+            color: var(--white);
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-logo {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .footer-logo span {
+            color: var(--yellow);
+        }
+
+        .footer-links h3, .footer-contact h3 {
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .footer-links h3:after, .footer-contact h3:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background: var(--yellow);
+        }
+
+        .footer-links ul {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--yellow);
+            padding-left: 5px;
+        }
+
+        .footer-contact p {
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-bottom a {
+            color: var(--yellow);
+            font-weight: 600;
+        }
+
+        .footer-bottom a:hover {
+            text-decoration: underline;
+        }
+
+        /* WhatsApp Float Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            box-shadow: var(--shadow-lg);
+            z-index: 999;
+            transition: var(--transition);
+            animation: pulse 2s infinite;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            background: #128C7E;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            h1 { font-size: 2.2rem; }
+            h2 { font-size: 1.8rem; }
+            .about-content { grid-template-columns: 1fr; }
+            .contact-content { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn { display: block; }
+            .nav-btns { display: none; }
+
+            .nav-links {
+                position: fixed;
+                top: 0;
+                left: -100%;
+                width: 280px;
+                height: 100vh;
+                background: var(--white);
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                padding: 6rem 2rem 2rem;
+                gap: 1.5rem;
+                box-shadow: var(--shadow-lg);
+                transition: var(--transition);
+                z-index: 1000;
+            }
+            
+            .nav-links.active {
+                left: 0;
+            }
+            
+            .nav-links .nav-btns-mobile {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                width: 100%;
+                margin-top: 2rem;
+                padding-top: 2rem;
+                border-top: 1px solid var(--gray-light);
+            }
+            
+            .menu-overlay {
+                display: block;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.5);
+                z-index: 999;
+                opacity: 0;
+                visibility: hidden;
+                transition: var(--transition);
+            }
+            
+            .menu-overlay.active {
+                opacity: 1;
+                visibility: visible;
+            }
+            
+            .hero-btns { flex-direction: column; }
+            .about-highlights { grid-template-columns: 1fr; }
+            .features { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 576px) {
+            section { padding: 3rem 0; }
+            h1 { font-size: 1.8rem; }
+            h2 { font-size: 1.5rem; }
+            .hero { height: 80vh; }
+            .booking-btns { grid-template-columns: 1fr; }
+            
+            .whatsapp-float {
+                bottom: 1rem;
+                right: 1rem;
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">RAO TOUR & <span>TRAVELS</span></a>
+                
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#cars">Our Cars</a></li>
+                    <li><a href="#rates">Rates</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <div class="nav-btns-mobile">
+                        <a href="#booking" class="btn btn-primary">Book Now</a>
+                        <a href="tel:09350328374" class="btn btn-secondary">Call Now</a>
+                    </div>
+                </ul>
+                
+                <div class="nav-btns">
+                    <a href="#booking" class="btn btn-primary">Book Now</a>
+                    <a href="tel:09350328374" class="btn btn-secondary">Call Now</a>
+                </div>
+                
+                <button class="mobile-menu-btn" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+    <div class="menu-overlay"></div>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Safe & Reliable Commercial Car Service</h1>
+                <p>Transparent Pricing – ₹13/km + Toll Only</p>
+                <div class="hero-btns">
+                    <a href="#booking" class="btn btn-primary">Book Now</a>
+                    <a href="tel:09350328374" class="btn btn-secondary">Call Now</a>
+                </div>
+                <div class="tagline-rotator">
+                    <div class="tagline active">Har Safar Mein Vishwas, Sirf ₹13/km + Toll</div>
+                    <div class="tagline">Fast, Affordable & Trusted Travel – ₹13/km Only</div>
+                    <div class="tagline">Book Your Ride Anywhere – Transparent Rates, No Hidden Charges</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="text-center">About Our Service</h2>
+            <div class="about-content">
+                <div>
+                    <p>With years of experience in the transportation industry, we provide safe, reliable, and affordable commercial car rental services. Our commitment to customer satisfaction and transparent pricing has made us a trusted choice for travelers.</p>
+                    <p>We prioritize your safety and comfort with well-maintained vehicles and professional drivers. Whether you need a ride for business or leisure, we ensure a smooth and pleasant journey.</p>
+                </div>
+                <div class="about-highlights">
+                    <div class="highlight">
+                        <i class="fas fa-rupee-sign"></i>
+                        <h3>Affordable Pricing</h3>
+                        <p>Only ₹13/km with no hidden charges</p>
+                    </div>
+                    <div class="highlight">
+                        <i class="fas fa-user-shield"></i>
+                        <h3>Trusted Drivers</h3>
+                        <p>Experienced and verified drivers</p>
+                    </div>
+                    <div class="highlight">
+                        <i class="fas fa-snowflake"></i>
+                        <h3>AC/Non-AC Options</h3>
+                        <p>Choose according to your preference</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cars" class="cars">
+        <div class="container">
+            <h2 class="text-center">Our Car Fleet</h2>
+            <div class="cars-grid">
+                <div class="car-card">
+                    <div class="car-img">
+                        <img src="https://i.ibb.co/wZLZDhWw/image.png" alt="Maruti Suzuki Dzire">
+                    </div>
+                    <div class="car-info">
+                        <h3>Maruti Suzuki Dzire</h3>
+                        <div class="car-features">
+                            <span><i class="fas fa-users"></i> 4 Seater</span>
+                            <span><i class="fas fa-snowflake"></i> AC Available</span>
+                        </div>
+                        <p>Comfortable and fuel-efficient sedan perfect for city travel and short trips.</p>
+                        <a href="#booking" class="btn btn-primary" style="width: 100%;">Book This Car</a>
+                    </div>
+                </div>
+                <div class="car-card">
+                    <div class="car-img">
+                        <img src="https://i.ibb.co/8nVpSmbB/file.jpg" alt="Hyundai Aura">
+                    </div>
+                    <div class="car-info">
+                        <h3>Hyundai Aura</h3>
+                        <div class="car-features">
+                            <span><i class="fas fa-users"></i> 4 Seater</span>
+                            <span><i class="fas fa-snowflake"></i> AC Available</span>
+                        </div>
+                        <p>A stylish and modern sedan offering a comfortable and premium travel experience.</p>
+                        <a href="#booking" class="btn btn-primary" style="width: 100%;">Book This Car</a>
+                    </div>
+                </div>
+                <div class="car-card">
+                    <div class="car-img">
+                        <img src="https://i.ibb.co/mrJFFPYM/image.png" alt="Maruti WagonR">
+                    </div>
+                    <div class="car-info">
+                        <h3>Maruti WagonR</h3>
+                        <div class="car-features">
+                            <span><i class="fas fa-users"></i> 4 Seater</span>
+                            <span><i class="fas fa-snowflake"></i> AC Available</span>
+                        </div>
+                        <p>Spacious hatchback with excellent mileage, ideal for city commuting.</p>
+                        <a href="#booking" class="btn btn-primary" style="width: 100%;">Book This Car</a>
+                    </div>
+                </div>
+                <div class="car-card">
+                    <div class="car-img">
+                        <img src="https://i.ibb.co/4g3bbmvC/image.png" alt="Maruti Ertiga">
+                    </div>
+                    <div class="car-info">
+                        <h3>Maruti Ertiga</h3>
+                        <div class="car-features">
+                            <span><i class="fas fa-users"></i> 7 Seater</span>
+                            <span><i class="fas fa-snowflake"></i> AC Available</span>
+                        </div>
+                        <p>Versatile MPV with ample space for larger groups or extra luggage.</p>
+                        <a href="#booking" class="btn btn-primary" style="width: 100%;">Book This Car</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-us">
+        <div class="container">
+            <h2 class="text-center">Why Choose Us</h2>
+            <div class="features">
+                <div class="feature">
+                    <i class="fas fa-indian-rupee-sign"></i>
+                    <h3>Transparent Pricing</h3>
+                    <p>Only ₹13/km with no hidden costs. Toll charges paid by customer only.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-moon"></i>
+                    <h3>No Night Charges</h3>
+                    <p>Same rate day and night. No extra charges for nighttime travel.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Comfort & Safety First</h3>
+                    <p>Well-maintained vehicles and experienced drivers for your safety.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-clock"></i>
+                    <h3>24/7 Availability</h3>
+                    <p>Round-the-clock service to meet your travel needs anytime.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="rates" class="rates">
+        <div class="container">
+            <h2 class="text-center">Transparent Pricing</h2>
+            <p class="text-center" style="max-width: 600px; margin: 0 auto 2rem;">Simple Pricing. No Hidden Costs. Just Peaceful Rides.</p>
+            
+            <div class="pricing-table">
+                <div class="pricing-row">
+                    <div class="pricing-feature">Base Rate</div>
+                    <div class="pricing-value">₹13/km</div>
+                </div>
+                <div class="pricing-row">
+                    <div class="pricing-feature">Toll Charges</div>
+                    <div class="pricing-value">Paid by Customer</div>
+                </div>
+                <div class="pricing-row">
+                    <div class="pricing-feature">State Taxes</div>
+                    <div class="pricing-value">No Extra Charges</div>
+                </div>
+                <div class="pricing-row">
+                    <div class="pricing-feature">Night Charges</div>
+                    <div class="pricing-value">No Extra Charges</div>
+                </div>
+                <div class="pricing-row">
+                    <div class="pricing-feature">Waiting Charges</div>
+                    <div class="pricing-value">First 30 mins free</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="text-center">What Our Customers Say</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial">
+                    <div class="testimonial-text">
+                        "Excellent service! The driver was punctual and professional. The car was clean and comfortable. Will definitely use again."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Rahul Sharma">
+                        </div>
+                        <div class="author-info">
+                            <h4>Rahul Sharma</h4>
+                            <p>Business Traveler</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-text">
+                        "Transparent pricing as promised. No hidden charges unlike other services. Highly recommended for reliable travel."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Priya Patel">
+                        </div>
+                        <div class="author-info">
+                            <h4>Priya Patel</h4>
+                            <p>Family Vacation</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-text">
+                        "Booked for a business trip. The service was efficient and the driver was knowledgeable about routes. Great experience!"
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Vikram Singh">
+                        </div>
+                        <div class="author-info">
+                            <h4>Vikram Singh</h4>
+                            <p>Corporate Client</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="booking" class="booking">
+        <div class="container">
+            <h2 class="text-center">Book Your Ride</h2>
+            <div class="booking-form">
+                <form id="bookingForm">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="mobile">Mobile Number</label>
+                        <input type="tel" id="mobile" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="pickup">Pickup Location</label>
+                        <input type="text" id="pickup" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="car">Preferred Car</label>
+                        <select id="car" class="form-control">
+                            <option value="dzire">Maruti Suzuki Dzire</option>
+                            <option value="aura">Hyundai Aura</option>
+                            <option value="wagonr">Maruti WagonR</option>
+                            <option value="ertiga">Maruti Ertiga</option>
+                            <option value="any">Any Available Car</option>
+                        </select>
+                    </div>
+                    <div class="booking-btns">
+                        <button type="submit" class="btn btn-primary">Submit Booking</button>
+                        <a href="https://wa.me/919350328374?text=Hi,%20I%20would%20like%20to%20book%20a%20car%20rental%20service." class="btn btn-whatsapp">Book on WhatsApp</a>
+                        <a href="tel:09350328374" class="btn btn-secondary">Call to Book</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="text-center">Contact Us</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <h3>Phone</h3>
+                            <a href="tel:09350328374">09350328374</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <div>
+                            <h3>WhatsApp</h3>
+                            <a href="https://wa.me/919350328374">Click to Chat</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <a href="mailto:raorajeshshir@gmail.com">raorajeshshir@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Office Location</h3>
+                            <p>55 foot road near goodwill property Dwarka mor New Delhi</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d5890.020733574216!2d77.02832822442522!3d28.62294951039555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s55%20foot%20road%20near%20goodwill%20property%20Dwarka%20mor%20New%20Delhi!5e0!3m2!1sen!2sin!4v1759031585904!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">RAO TOUR & <span>TRAVELS</span></div>
+                    <p>Reliable Commercial Car Rentals – Safe Rides, Transparent Prices.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#cars">Our Cars</a></li>
+                        <li><a href="#rates">Rates & Pricing</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-phone-alt"></i> 09350328374</p>
+                    <p><i class="fab fa-whatsapp"></i> WhatsApp: 09350328374</p>
+                    <p><i class="fas fa-envelope"></i> raorajeshshir@gmail.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Powered by <a href="https://www.raodevlopers.xyz/" target="_blank">Rao Developers</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/919350328374?text=Hi,%20I%20would%20like%20to%20book%20a%20car%20rental%20service." class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        const menuOverlay = document.querySelector('.menu-overlay');
+        const body = document.body;
+
+        function closeMenu() {
+            navLinks.classList.remove('active');
+            mobileMenuBtn.classList.remove('active');
+            menuOverlay.classList.remove('active');
+            body.classList.remove('menu-open');
+        }
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.classList.toggle('active');
+            menuOverlay.classList.toggle('active');
+            body.classList.toggle('menu-open');
+        });
+
+        menuOverlay.addEventListener('click', closeMenu);
+
+        // Header Scroll Effect
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 80) {
+                header.classList.add('header-scrolled');
+            } else {
+                header.classList.remove('header-scrolled');
+            }
+        });
+
+        // Tagline Rotator
+        const taglines = document.querySelectorAll('.tagline');
+        let currentTagline = 0;
+        
+        function rotateTaglines() {
+            taglines.forEach(tagline => tagline.classList.remove('active'));
+            currentTagline = (currentTagline + 1) % taglines.length;
+            taglines[currentTagline].classList.add('active');
+        }
+        
+        setInterval(rotateTaglines, 4000);
+
+        // Car Card Animation on Scroll
+        const carCards = document.querySelectorAll('.car-card');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+        carCards.forEach(card => observer.observe(card));
+
+        // Booking Form Submission
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const mobile = document.getElementById('mobile').value;
+            const pickup = document.getElementById('pickup').value;
+            const carSelect = document.getElementById('car');
+            const car = carSelect.options[carSelect.selectedIndex].text;
+
+            const message = `Hi, I would like to book a car rental service.\n\n*Name:* ${name}\n*Mobile:* ${mobile}\n*Pickup Location:* ${pickup}\n*Preferred Car:* ${car}`;
+            
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappNumber = '919350328374';
+            const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+            
+            window.open(whatsappUrl, '_blank');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 70,
+                        behavior: 'smooth'
+                    });
+                    
+                    if (navLinks.classList.contains('active')) {
+                       closeMenu();
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
